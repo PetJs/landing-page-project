@@ -25,6 +25,8 @@
                 "wdth" 100,
                 "YTLC" 500;
         }
+
+        /* Header Styles */
         header{
             background: url("assets/images/home2023-hero.jpg") ;
             background-size: cover;
@@ -32,48 +34,112 @@
             font-size: 1.5em;
             color: #fff;
         }
+
         nav{
             display: flex;
             justify-content: space-between;
             padding: 2.5rem;
         }
+
         .hero p, .hero h1, .hero h3, .hero button {
             margin-top: 20px;
         }
+
         .hero{
             padding: 2em;
             margin-left: 3em;
             font-size: 2rem;
         }
+
         .hero p{
             color: goldenrod;
             font-size: 36px;
         }
+
         h1{
             font-size: 2rem;
         }
+
         .h1text{
             font-size: 3rem;
         }
+
         h3 span{
             display: block;
-
         }
+
         nav ul {
             list-style-type: none;
             display: flex;
             justify-content: space-evenly;
             gap: 32px;
         }
+
+        .list-items li{
+            position: relative;
+        }
+        
+        .list-items a{
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            padding: 10px;
+            display: block;
+            font-size: 26px;
+        }
+
+        hr{
+            color: #666;
+        }
+
+        .list-items a:hover{
+            color: #666 ;
+            background-color: #fff;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            min-width: 200px;
+            z-index: 10;
+            top: 100%;
+            left: 0;
+            border-radius: 5px;
+        }
+
+        .dropdown-content li {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 10px 15px;
+            display: block;
+            white-space: nowrap;
+            font-size: 20px;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f5f5f5;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
         button{
             padding: 20px;
             border-radius: 36px;
             font-size: 30px;
         }
+
         button:hover{
             color: #fff;
         }
 
+        /* About Styles */
         main{
             background-image: url("assets/images/vision-bg.jpg") ;
             text-align: center;
@@ -87,20 +153,25 @@
             margin: 0 auto;
             padding: 3em;
         }
+
         main h2{
             margin: 30px;
         }
+
         main h2{
             font-size: 3em;
         }
+
         .section{
             display: block;
         }
 
+        /* Footer Styles */
         footer {
             background-color: #f8f8f8;
             padding: 40px 20px;
         }
+
         .footer-container {
             display: flex;
             justify-content: space-between;
@@ -109,45 +180,55 @@
             margin: 0 auto;
             gap: 50px;
         }
+
         .footer-section {
             flex: 1;
             min-width: 200px;
             margin-bottom: 20px;
         }
+
         .footer-section h3{
             font-size: 44px;
         }
+
         .footer-section h3 {
             font-size: 26px;
             font-weight: bold;
             margin-bottom: 10px;
             color: #666;
         }
+
         .footer-section ul {
             list-style: none;
             padding: 0;
         }
+
         .footer-section ul li {
             margin-bottom: 8px;
         }
+
         .footer-section ul li a {
             text-decoration: none;
             color: #333;
             font-size: 20px;
         }
+
         .footer-section ul li a:hover {
             color: #000;
         }
+
         .footer-bottom {
             text-align: center;
             padding-top: 20px;
             font-size: 16px;
             color: #666;
         }
+
         .footer-bottom a {
             color: #666;
             text-decoration: none;
         }
+
         .footer-bottom a:hover {
             color: #000;
             text-decoration: underline;
@@ -163,13 +244,54 @@
                 <h2>YOUVERSION</h2>
             </div>
             <div>
-                <ul>
-                    <li>Products</li>
-                    <li>About</li>
-                    <li>Press</li>
-                    <li>Give</li>
-                    <li>Partners</li>
-                    <li>Volunteers</li>
+                <ul class="list-items">
+                    <li class="dropdown">
+                        <a href="#" class="items">Products</a>
+                        <ul class="dropdown-content">
+                            <li><a href="#">Bible App</a></li>
+                            <hr>
+                            <li><a href="#">Bible App Lite</a></li>
+                            <hr>
+                            <li><a href="#">Bible App for Kids</a></li>
+                            <hr>
+                            <li><a href="#">YouVersion Connect</a></li>
+                            <hr>
+                            <li><a href="#">Church Online Platform</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="items">About</a>
+                        <ul class="dropdown-content">
+                            <li><a href="#">Mission</a></li>
+                            <hr>
+                            <li><a href="#">Stories</a></li>
+                            <hr>
+                            <li><a href="#">Careers</a></li>
+                            <hr>
+                            <li><a href="#">Press</a></li>
+                            <hr>
+                            <li><a href="#">Bible Translation</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="items">Press</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="items">Give</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="items">Partners</a>
+                        <ul class="dropdown-content">
+                            <li><a href="#">Content Partners</a></li>
+                            <hr>
+                            <li><a href="#">Bible Partners</a></li>
+                            <hr>
+                            <li><a href="#">Churches</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="items">Volunteers</a>
+                    </li>
                 </ul>
             </div>   
         </nav>
