@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
     <title>YouVersion</title>
 
     <!-- Style -->
@@ -11,6 +14,16 @@
             padding: 0;
             margin: 0;
             box-sizing: border-box;
+        }
+        
+        .nunito-sans {
+        font-family: "Nunito Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-variation-settings:
+            "wdth" 100,
+            "YTLC" 500;
         }
         header{
             background: url("assets/images/home2023-hero.jpg") ;
@@ -39,10 +52,14 @@
         h1{
             font-size: 2rem;
         }
-        span{
+        .h1text{
             font-size: 3rem;
         }
-        ul {
+        h3 span{
+            display: block;
+
+        }
+        nav ul {
             list-style-type: none;
             display: flex;
             justify-content: space-evenly;
@@ -65,20 +82,22 @@
             <div>
                 <h2>YOUVERSION</h2>
             </div>
-            <ul>
-                <li>Products</li>
-                <li>About</li>
-                <li>Press</li>
-                <li>Give</li>
-                <li>Partners</li>
-                <li>Volunteers</li>
-            </ul>
+            <div>
+                <ul>
+                    <li>Products</li>
+                    <li>About</li>
+                    <li>Press</li>
+                    <li>Give</li>
+                    <li>Partners</li>
+                    <li>Volunteers</li>
+                </ul>
+            </div>   
         </nav>
         <!-- HERO SECTION -->
         <div class="hero">
             <p>Now Available</p>
-            <h1><span>YouVersion</span> CONNECT</h1>
-            <h3>A powerful new platform created with the ministry in your mind</h3>
+            <h1><span class="h1text">YouVersion</span> CONNECT</h1>
+            <h3>A powerful new platform created <span> with the ministry in your mind</span></h3>
             <button>Discover Now</button>
         </div>
     </header>
