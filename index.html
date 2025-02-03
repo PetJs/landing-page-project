@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <title>YouVersion</title>
+
+    <!-- Style -->
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        .nunito-sans {
+            font-family: "Nunito Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            font-variation-settings:
+                "wdth" 100,
+                "YTLC" 500;
+        }
+        header{
+            background: url("assets/images/home2023-hero.jpg") ;
+            background-size: cover;
+            height: 100vh;
+            font-size: 1.5em;
+            color: #fff;
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            padding: 2.5rem;
+        }
+        .hero p, .hero h1, .hero h3, .hero button {
+            margin-top: 20px;
+        }
+        .hero{
+            padding: 2em;
+            margin-left: 3em;
+            font-size: 2rem;
+        }
+        .hero p{
+            color: goldenrod;
+            font-size: 36px;
+        }
+        h1{
+            font-size: 2rem;
+        }
+        .h1text{
+            font-size: 3rem;
+        }
+        h3 span{
+            display: block;
+
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-evenly;
+            gap: 32px;
+        }
+        button{
+            padding: 20px;
+            border-radius: 36px;
+            font-size: 30px;
+        }
+        button:hover{
+            color: #fff;
+        }
+
+        main{
+            background-image: url("assets/images/vision-bg.jpg") ;
+            text-align: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: auto;
+            height: 75vh;
+            font-size: 1.5em;
+            color: #fff;
+            margin: 0 auto;
+            padding: 3em;
+        }
+        main h2{
+            margin: 30px;
+        }
+        main h2{
+            font-size: 3em;
+        }
+        .section{
+            display: block;
+        }
+
+        footer {
+            background-color: #f8f8f8;
+            padding: 40px 20px;
+        }
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 50px;
+        }
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+            margin-bottom: 20px;
+        }
+        .footer-section h3{
+            font-size: 44px;
+        }
+        .footer-section h3 {
+            font-size: 26px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #666;
+        }
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-section ul li {
+            margin-bottom: 8px;
+        }
+        .footer-section ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 20px;
+        }
+        .footer-section ul li a:hover {
+            color: #000;
+        }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            font-size: 16px;
+            color: #666;
+        }
+        .footer-bottom a {
+            color: #666;
+            text-decoration: none;
+        }
+        .footer-bottom a:hover {
+            color: #000;
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body class="nunito-sans">
+    <!-- HEADER SECTION -->
+    <header>
+        <nav>
+            <div>
+                <h2>YOUVERSION</h2>
+            </div>
+            <div>
+                <ul>
+                    <li>Products</li>
+                    <li>About</li>
+                    <li>Press</li>
+                    <li>Give</li>
+                    <li>Partners</li>
+                    <li>Volunteers</li>
+                </ul>
+            </div>   
+        </nav>
+        <!-- HERO SECTION -->
+        <div class="hero">
+            <p>Now Available</p>
+            <h1><span class="h1text">YouVersion</span> CONNECT</h1>
+            <h3>A powerful new platform created <span> with the ministry in your mind</span></h3>
+            <button>Discover Now</button>
+        </div>
+    </header>
+
+    <!-- BODY OF THE PAGE -->
+    <main>
+        <h3>Our Vision</h3>
+        <h2>Connecting everyone, <span class="section"> everywhere, to God's</span> <span> Word every day.</span></h2>
+        <button>Our Products</button>
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h2>YouVersion</h2>
+                <ul>
+                    <li><a href="#">Technical Support</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Products</h3>
+                <ul>
+                    <li><a href="#">Bible App</a></li>
+                    <li><a href="#">Bible App Lite</a></li>
+                    <li><a href="#">Bible App for Kids</a></li>
+                    <li><a href="#">YouVersion Connect</a></li>
+                    <li><a href="#">Church Online Platform</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section">
+                <h3>About YouVersion</h3>
+                <ul>
+                    <li><a href="#">Mission</a></li>
+                    <li><a href="#">Stories</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Bible Translation</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Volunteers</a></li>
+                    <li><a href="#">Give</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Partners</h3>
+                <ul>
+                    <li><a href="#">Content Partners</a></li>
+                    <li><a href="#">Bible Partners</a></li>
+                    <li><a href="#">Churches</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">YouTube</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>© Life.Church / YouVersion | <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> | <a href="#">Vulnerability Disclosure Program</a></p>
+        </div>
+    </footer>    
+    
+    
+</body>
+</html>
