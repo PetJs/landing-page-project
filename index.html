@@ -10,97 +10,96 @@
 
     <!-- Style -->
     <style>
-        *{
+        /* Global Reset */
+        * {
             padding: 0;
             margin: 0;
             box-sizing: border-box;
         }
-        
-        .nunito-sans {
-            font-family: "Nunito Sans", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: 400;
-            font-style: normal;
-            font-variation-settings:
-                "wdth" 100,
-                "YTLC" 500;
+
+        /* CSS Variables */
+        :root {
+            --primary-color: #fff;
+            --secondary-color: #666;
+            --accent-color: goldenrod;
+            --bg-dark: #000;
+            --bg-light: #f8f8f8;
+            --font-primary: "Nunito Sans", sans-serif;
+            --font-size-lg: 2rem;
+            --font-size-md: 1.5rem;
+            --font-size-sm: 1rem;
+            --padding-lg: 2.5rem;
+            --border-radius: 36px;
+        }
+
+        body {
+            font-family: var(--font-primary);
         }
 
         /* Header Styles */
-        header{
-            background: url("assets/images/home2023-hero.jpg") ;
-            background-size: cover;
+        header {
+            background: url("assets/images/home2023-hero.jpg") no-repeat center/cover;
             height: 100vh;
-            font-size: 1.5em;
-            color: #fff;
+            font-size: var(--font-size-md);
+            color: var(--primary-color);
+            display: flex;
+            flex-direction: column;
         }
 
-        nav{
+        nav {
             display: flex;
             justify-content: space-between;
-            padding: 2.5rem;
-        }
-
-        .hero p, .hero h1, .hero h3, .hero button {
-            margin-top: 20px;
-        }
-
-        .hero{
-            padding: 2em;
-            margin-left: 3em;
-            font-size: 2rem;
-        }
-
-        .hero p{
-            color: goldenrod;
-            font-size: 36px;
-        }
-
-        h1{
-            font-size: 2rem;
-        }
-
-        .h1text{
-            font-size: 3rem;
-        }
-
-        h3 span{
-            display: block;
+            padding: var(--padding-lg);
         }
 
         nav ul {
-            list-style-type: none;
+            list-style: none;
             display: flex;
-            justify-content: space-evenly;
             gap: 32px;
         }
 
-        .list-items li{
-            position: relative;
-        }
-        
-        .list-items a{
+        .list-items a {
             text-decoration: none;
-            color: white;
-            font-size: 16px;
+            color: var(--primary-color);
+            font-size: 26px;
             padding: 10px;
             display: block;
-            font-size: 26px;
+            transition: color 0.3s ease, background-color 0.3s ease;
         }
 
-        hr{
-            color: #666;
+        .list-items a:hover {
+            color: var(--secondary-color);
+            background-color: var(--primary-color);
         }
 
-        .list-items a:hover{
-            color: #666 ;
-            background-color: #fff;
+        .hero {
+            padding: 2em;
+            margin-left: 3em;
+            font-size: var(--font-size-lg);
+        }
+
+        .hero p {
+            color: var(--accent-color);
+            font-size: 36px;
+        }
+
+        h1 {
+            font-size: var(--font-size-lg);
+        }
+
+        h3 span {
+            display: block;
+        }
+
+        /* Dropdown Menu */
+        .dropdown{
+            position: relative;
         }
 
         .dropdown-content {
             display: none;
             position: absolute;
-            background-color: white;
+            background-color: var(--primary-color);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             min-width: 200px;
             z-index: 10;
@@ -109,66 +108,55 @@
             border-radius: 5px;
         }
 
-        .dropdown-content li {
+        .dropdown:hover .dropdown-content {
             display: block;
         }
 
         .dropdown-content a {
-            color: black;
+            color: var(--bg-dark);
             padding: 10px 15px;
             display: block;
-            white-space: nowrap;
             font-size: 20px;
+            transition: background-color 0.3s ease;
         }
 
         .dropdown-content a:hover {
             background-color: #f5f5f5;
         }
 
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        button{
+        /* Button */
+        button {
             padding: 20px;
-            border-radius: 36px;
+            border-radius: var(--border-radius);
             font-size: 30px;
+            transition: background 0.3s ease, color 0.3s ease;
         }
 
-        button:hover{
-            color: #fff;
+        button:hover {
+            color: var(--primary-color);
+            background-color: var(--accent-color);
         }
 
-        /* About Styles */
-        main{
-            background-image: url("assets/images/vision-bg.jpg") ;
+        /* About Section */
+        main {
+            background: url("assets/images/vision-bg.jpg") no-repeat center/cover;
             text-align: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
             width: auto;
             height: 75vh;
-            font-size: 1.5em;
-            color: #fff;
+            font-size: var(--font-size-md);
+            color: var(--primary-color);
             margin: 0 auto;
             padding: 3em;
         }
 
-        main h2{
+        main h2 {
             margin: 30px;
-        }
-
-        main h2{
             font-size: 3em;
         }
 
-        .section{
-            display: block;
-        }
-
-        /* Footer Styles */
+        /* Footer with Container Queries */
         footer {
-            background-color: #f8f8f8;
+            background-color: var(--bg-light);
             padding: 40px 20px;
         }
 
@@ -179,6 +167,7 @@
             max-width: 1200px;
             margin: 0 auto;
             gap: 50px;
+            container-type: inline-size;
         }
 
         .footer-section {
@@ -187,15 +176,11 @@
             margin-bottom: 20px;
         }
 
-        .footer-section h3{
-            font-size: 44px;
-        }
-
         .footer-section h3 {
             font-size: 26px;
             font-weight: bold;
             margin-bottom: 10px;
-            color: #666;
+            color: var(--secondary-color);
         }
 
         .footer-section ul {
@@ -203,35 +188,29 @@
             padding: 0;
         }
 
-        .footer-section ul li {
-            margin-bottom: 8px;
-        }
-
         .footer-section ul li a {
             text-decoration: none;
-            color: #333;
+            color: var(--secondary-color);
             font-size: 20px;
+            transition: color 0.3s ease;
         }
 
         .footer-section ul li a:hover {
-            color: #000;
+            color: var(--bg-dark);
         }
 
         .footer-bottom {
             text-align: center;
             padding-top: 20px;
-            font-size: 16px;
-            color: #666;
+            font-size: var(--font-size-sm);
+            color: var(--secondary-color);
         }
 
-        .footer-bottom a {
-            color: #666;
-            text-decoration: none;
-        }
-
-        .footer-bottom a:hover {
-            color: #000;
-            text-decoration: underline;
+        @container (max-width: 600px) {
+            .footer-container {
+                flex-direction: column;
+                text-align: center;
+            }
         }
 
     </style>
@@ -371,7 +350,6 @@
             <p>© Life.Church / YouVersion | <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> | <a href="#">Vulnerability Disclosure Program</a></p>
         </div>
     </footer>    
-    
     
 </body>
 </html>
