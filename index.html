@@ -29,6 +29,8 @@
             --font-size-md: 1.5rem;
             --font-size-sm: 1rem;
             --padding-lg: 2.5rem;
+            --padding-md: 1.5rem;
+            --padding-sm: 0.5rem;
             --border-radius: 36px;
         }
 
@@ -130,6 +132,7 @@
             border-radius: var(--border-radius);
             font-size: 30px;
             transition: background 0.3s ease, color 0.3s ease;
+            cursor: pointer;
         }
 
         button:hover {
@@ -211,6 +214,74 @@
                 flex-direction: column;
                 text-align: center;
             }
+        }
+
+        @media (max-width: 1200px){
+            nav{
+                display: flex;
+                justify-content: center;
+                padding: var(--padding-sm);
+                background-color: var(--bg-light);
+                color: var(--bg-dark);
+            }
+            .list-items{
+                display: none;
+            }
+
+            header{
+                height: 500px;
+            }
+
+            .hero {
+                padding: 0.5em;
+                margin-left: 1em;
+                font-size: var(--font-size-sm);
+            }
+
+            .hero p {
+                color: var(--accent-color);
+                font-size: 20px;
+                margin-bottom: 12px;
+            }
+
+            h1 {
+                font-size: var(--font-size-lg);
+                margin-bottom: 12px;
+            }
+
+            main {
+                height: 50vh;
+                font-size: var(--font-size-sm);
+                color: var(--primary-color);
+                margin: 0 auto;
+                padding: 2em;
+            }
+
+            main h2 {
+                margin: 30px;
+                font-size: 3em;
+            }
+
+            .footer-section{
+                display: none;
+            }
+
+            .footer-section:first-child{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                font-size: var(--font-size-md);
+                text-align: center;
+            }
+
+            .footer-section ul li a {
+                text-decoration: none;
+                color: var(--secondary-color);
+                font-size: 22px;
+                transition: color 0.3s ease;
+            }
+
         }
 
     </style>
