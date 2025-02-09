@@ -30,5 +30,8 @@ Replicating the YouVersion Bible Web page front page
     ```bash
     git push origin feature/<feature-name>
 
+## 
+Here is the link to an Article I wrote about Modern CSS[Modern CSS: Design made simpler](https://medium.com/@peterfagoroye76/modern-css-design-made-simpler-3c9a9904dfdf)
+
 
 
