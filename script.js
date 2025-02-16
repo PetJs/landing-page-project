@@ -31,17 +31,19 @@ const mobileNav = () => {
     // Toggle menu on click
     menuBtn.addEventListener('click', () => {
         if (navList.style.display === 'none') {
+            menuBtn.innerHTML = 'X';
             navList.style.display = 'flex';
             navList.style.flexDirection = 'column';
             navList.style.position = 'absolute';
             navList.style.top = '100%';
             navList.style.left = '0';
             navList.style.width = '100%';
-            navList.style.backgroundColor = 'var(--bg-light)';
+            navList.style.backgroundColor = 'var(--bg-dark)';
             navList.style.padding = '20px';
             navList.style.zIndex = '100';
         } else {
             navList.style.display = 'none';
+            menuBtn.innerHTML = '☰';
         }
     });
 
