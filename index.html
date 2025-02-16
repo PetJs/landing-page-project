@@ -219,7 +219,8 @@
         @media (max-width: 1200px){
             nav{
                 display: flex;
-                justify-content: center;
+                justify-content: space-between;
+                align-items: center;
                 padding: var(--padding-sm);
                 background-color: var(--bg-light);
                 color: var(--bg-dark);
@@ -258,7 +259,7 @@
             }
 
             main h2 {
-                margin: 30px;
+                margin: 20px;
                 font-size: 3em;
             }
 
@@ -281,7 +282,12 @@
                 font-size: 22px;
                 transition: color 0.3s ease;
             }
-
+        }
+        @media (max-width: 600px){
+            main h2 {
+                margin: 20px;
+                font-size: 26px;
+            }
         }
 
     </style>
@@ -421,6 +427,6 @@
             <p>© Life.Church / YouVersion | <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> | <a href="#">Vulnerability Disclosure Program</a></p>
         </div>
     </footer>    
-    
+    <script src="script.js"></script>
 </body>
 </html>
