@@ -31,6 +31,8 @@ Replicating the YouVersion Bible Web page front page
     git push origin feature/<feature-name>
 
 ## 
+Here is the link to the live website [YouVersion Landing Page](https://landing-page-project-two-beta.vercel.app/)
+
 Here is the link to an Article I wrote about Modern CSS[Modern CSS: Design made simpler](https://medium.com/@peterfagoroye76/modern-css-design-made-simpler-3c9a9904dfdf)
 
 
